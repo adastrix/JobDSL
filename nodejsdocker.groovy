@@ -1,4 +1,4 @@
-job('NodeJS Docker example') {
+job('NodeJS Docker example with Push AUTO-GENERATED') {
     scm {
         git('git://github.com/adastrix/docker-demo.git') {  node -> // is hudson.plugins.git.GitSCM
             node / gitConfigName('adastrix')
@@ -6,7 +6,7 @@ job('NodeJS Docker example') {
         }
     }
     triggers {
-        scm('H/5 * * * *')
+        scm('* * * * *')
     }
     wrappers {
         nodejs('nodejs') // this is the name of the NodeJS installation in 
